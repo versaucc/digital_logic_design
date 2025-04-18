@@ -1,0 +1,15 @@
+
+
+//Lab 1 implementation in systemVerilog HDL 
+
+module DemoLogicHDL(
+	input logic A, B, C, 
+	output logic Z
+); 
+
+
+assign Z = (A ^ B) & (B | C);
+
+
+
+endmodule

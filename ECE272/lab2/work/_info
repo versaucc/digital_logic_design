@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE272/lab1
+vFourBitAdder
+Z0 !s110 1744398012
+!i10b 1
+!s100 VK1I8zFkL<ooEiZg5j1Xo1
+Iezl>@G0jS_YQBVa``TkL13
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/ECE272/lab2
+w1744397932
+8C:/ECE272/lab2/FourBitAdder.v
+FC:/ECE272/lab2/FourBitAdder.v
+Z3 L0 20
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1744398012.000000
+!s107 C:/ECE272/lab2/FourBitAdder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ECE272/lab2/FourBitAdder.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@four@bit@adder
+vFullAdder
+R0
+!i10b 1
+!s100 K2MiiG_hVCHLn1?ab0V6I0
+ImaO_f7T>lVTe@z7Ln>bYE1
+R1
+R2
+w1744397945
+8C:/ECE272/lab2/FullAdder.v
+FC:/ECE272/lab2/FullAdder.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ECE272/lab2/FullAdder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ECE272/lab2/FullAdder.v|
+!i113 1
+R6
+R7
+n@full@adder

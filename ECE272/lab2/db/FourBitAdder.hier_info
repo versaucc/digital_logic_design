@@ -1,0 +1,97 @@
+|FourBitAdder
+Cout <= FullAdder:inst2.Cout
+A[0] => FullAdder:inst3.A
+A[1] => FullAdder:inst1.A
+A[2] => FullAdder:inst.A
+A[3] => FullAdder:inst2.A
+B[0] => FullAdder:inst3.B
+B[1] => FullAdder:inst1.B
+B[2] => FullAdder:inst.B
+B[3] => FullAdder:inst2.B
+Cin => FullAdder:inst3.Cin
+z[0] <= FullAdder:inst3.SUM
+z[1] <= FullAdder:inst1.SUM
+z[2] <= FullAdder:inst.SUM
+z[3] <= FullAdder:inst2.SUM
+
+
+|FourBitAdder|FullAdder:inst2
+Cout <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Cin => inst19.IN0
+Cin => inst18.IN0
+Cin => inst.IN2
+Cin => inst9.IN0
+Cin => inst3.IN0
+A => inst19.IN1
+A => inst17.IN0
+A => inst7.IN0
+A => AnotBnotC.IN0
+A => inst3.IN2
+B => inst18.IN1
+B => inst17.IN1
+B => inst8.IN0
+B => inst3.IN1
+B => inst2.IN1
+SUM <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitAdder|FullAdder:inst
+Cout <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Cin => inst19.IN0
+Cin => inst18.IN0
+Cin => inst.IN2
+Cin => inst9.IN0
+Cin => inst3.IN0
+A => inst19.IN1
+A => inst17.IN0
+A => inst7.IN0
+A => AnotBnotC.IN0
+A => inst3.IN2
+B => inst18.IN1
+B => inst17.IN1
+B => inst8.IN0
+B => inst3.IN1
+B => inst2.IN1
+SUM <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitAdder|FullAdder:inst1
+Cout <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Cin => inst19.IN0
+Cin => inst18.IN0
+Cin => inst.IN2
+Cin => inst9.IN0
+Cin => inst3.IN0
+A => inst19.IN1
+A => inst17.IN0
+A => inst7.IN0
+A => AnotBnotC.IN0
+A => inst3.IN2
+B => inst18.IN1
+B => inst17.IN1
+B => inst8.IN0
+B => inst3.IN1
+B => inst2.IN1
+SUM <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitAdder|FullAdder:inst3
+Cout <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+Cin => inst19.IN0
+Cin => inst18.IN0
+Cin => inst.IN2
+Cin => inst9.IN0
+Cin => inst3.IN0
+A => inst19.IN1
+A => inst17.IN0
+A => inst7.IN0
+A => AnotBnotC.IN0
+A => inst3.IN2
+B => inst18.IN1
+B => inst17.IN1
+B => inst8.IN0
+B => inst3.IN1
+B => inst2.IN1
+SUM <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+
+
