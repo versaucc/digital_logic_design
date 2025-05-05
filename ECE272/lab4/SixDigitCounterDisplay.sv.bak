@@ -1,0 +1,12 @@
+// 6 Digit Counter Display (hex) 
+
+module SixDigitcounterDisplay (
+	input logic clock, 
+	input logic clear_n, 
+	input logic [3:0] addBy, 
+	output logic [6:0] Seg0,
+	output logic [6:0] Seg1,
+	output logic [6:0] Seg2,
+	output logic [6:0] Seg3,
+	output logic [6:0] Seg4,
+	output logic [6:0] Seg5,
