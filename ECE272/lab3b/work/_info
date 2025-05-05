@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vSevenSegmentDecode
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1745534973
+!i10b 1
+!s100 @oXeYOVTe8A0]g]DBll4K0
+I;`iFNP:G0EU5?@bA;1=UP2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 SevenSegmentDecode_sv_unit
+S1
+Z3 dC:/digital_logic_design/ECE272/lab3b
+w1745534771
+8C:/digital_logic_design/ECE272/lab3b/SevenSegmentDecode.sv
+FC:/digital_logic_design/ECE272/lab3b/SevenSegmentDecode.sv
+L0 27
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1745534973.000000
+!s107 C:/digital_logic_design/ECE272/lab3b/SevenSegmentDecode.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab3b/SevenSegmentDecode.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@seven@segment@decode
+vSevenSegmentTestbench
+R0
+R1
+!i10b 1
+!s100 a8:z[2]`?0WS_n>jAM=6L0
+IVnNPggXC;hnbnj^a;cK8W2
+R2
+!s105 SevenSegmentTestbench_sv_unit
+S1
+R3
+w1745534953
+8C:/digital_logic_design/ECE272/lab3b/SevenSegmentTestbench.sv
+FC:/digital_logic_design/ECE272/lab3b/SevenSegmentTestbench.sv
+L0 22
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab3b/SevenSegmentTestbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab3b/SevenSegmentTestbench.sv|
+!i113 1
+R6
+R7
+n@seven@segment@testbench
