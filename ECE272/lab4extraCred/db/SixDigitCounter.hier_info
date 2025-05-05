@@ -1,0 +1,483 @@
+|SixDigitCounterDisplay
+clock => clock.IN6
+clear_n => override.DATAA
+addBy[0] => addBy[0].IN1
+addBy[1] => addBy[1].IN1
+addBy[2] => addBy[2].IN1
+addBy[3] => addBy[3].IN1
+Seg0[0] <= SevenSegmentDecode:SegZero.segments
+Seg0[1] <= SevenSegmentDecode:SegZero.segments
+Seg0[2] <= SevenSegmentDecode:SegZero.segments
+Seg0[3] <= SevenSegmentDecode:SegZero.segments
+Seg0[4] <= SevenSegmentDecode:SegZero.segments
+Seg0[5] <= SevenSegmentDecode:SegZero.segments
+Seg0[6] <= SevenSegmentDecode:SegZero.segments
+Seg1[0] <= SevenSegmentDecode:SegOne.segments
+Seg1[1] <= SevenSegmentDecode:SegOne.segments
+Seg1[2] <= SevenSegmentDecode:SegOne.segments
+Seg1[3] <= SevenSegmentDecode:SegOne.segments
+Seg1[4] <= SevenSegmentDecode:SegOne.segments
+Seg1[5] <= SevenSegmentDecode:SegOne.segments
+Seg1[6] <= SevenSegmentDecode:SegOne.segments
+Seg2[0] <= SevenSegmentDecode:SegTwo.segments
+Seg2[1] <= SevenSegmentDecode:SegTwo.segments
+Seg2[2] <= SevenSegmentDecode:SegTwo.segments
+Seg2[3] <= SevenSegmentDecode:SegTwo.segments
+Seg2[4] <= SevenSegmentDecode:SegTwo.segments
+Seg2[5] <= SevenSegmentDecode:SegTwo.segments
+Seg2[6] <= SevenSegmentDecode:SegTwo.segments
+Seg3[0] <= SevenSegmentDecode:SegThree.segments
+Seg3[1] <= SevenSegmentDecode:SegThree.segments
+Seg3[2] <= SevenSegmentDecode:SegThree.segments
+Seg3[3] <= SevenSegmentDecode:SegThree.segments
+Seg3[4] <= SevenSegmentDecode:SegThree.segments
+Seg3[5] <= SevenSegmentDecode:SegThree.segments
+Seg3[6] <= SevenSegmentDecode:SegThree.segments
+Seg4[0] <= SevenSegmentDecode:SegFour.segments
+Seg4[1] <= SevenSegmentDecode:SegFour.segments
+Seg4[2] <= SevenSegmentDecode:SegFour.segments
+Seg4[3] <= SevenSegmentDecode:SegFour.segments
+Seg4[4] <= SevenSegmentDecode:SegFour.segments
+Seg4[5] <= SevenSegmentDecode:SegFour.segments
+Seg4[6] <= SevenSegmentDecode:SegFour.segments
+Seg5[0] <= SevenSegmentDecode:SegFive.segments
+Seg5[1] <= SevenSegmentDecode:SegFive.segments
+Seg5[2] <= SevenSegmentDecode:SegFive.segments
+Seg5[3] <= SevenSegmentDecode:SegFive.segments
+Seg5[4] <= SevenSegmentDecode:SegFive.segments
+Seg5[5] <= SevenSegmentDecode:SegFive.segments
+Seg5[6] <= SevenSegmentDecode:SegFive.segments
+
+
+|SixDigitCounterDisplay|Counter:DigitZero
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= <GND>
+sum[2] <= <GND>
+sum[3] <= <GND>
+
+
+|SixDigitCounterDisplay|Counter:DigitZero|RegisterFourBit:dut
+clock => clock.IN4
+clear_n => clear_n.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= RegisterOneBit:bitZero.qout
+q[1] <= RegisterOneBit:bitOne.qout
+q[2] <= RegisterOneBit:bitTwo.qout
+q[3] <= RegisterOneBit:bitThree.qout
+
+
+|SixDigitCounterDisplay|Counter:DigitZero|RegisterFourBit:dut|RegisterOneBit:bitZero
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitZero|RegisterFourBit:dut|RegisterOneBit:bitOne
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitZero|RegisterFourBit:dut|RegisterOneBit:bitTwo
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitZero|RegisterFourBit:dut|RegisterOneBit:bitThree
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitOne
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= <GND>
+sum[2] <= <GND>
+sum[3] <= <GND>
+
+
+|SixDigitCounterDisplay|Counter:DigitOne|RegisterFourBit:dut
+clock => clock.IN4
+clear_n => clear_n.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= RegisterOneBit:bitZero.qout
+q[1] <= RegisterOneBit:bitOne.qout
+q[2] <= RegisterOneBit:bitTwo.qout
+q[3] <= RegisterOneBit:bitThree.qout
+
+
+|SixDigitCounterDisplay|Counter:DigitOne|RegisterFourBit:dut|RegisterOneBit:bitZero
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitOne|RegisterFourBit:dut|RegisterOneBit:bitOne
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitOne|RegisterFourBit:dut|RegisterOneBit:bitTwo
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitOne|RegisterFourBit:dut|RegisterOneBit:bitThree
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitTwo
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= <GND>
+sum[2] <= <GND>
+sum[3] <= <GND>
+
+
+|SixDigitCounterDisplay|Counter:DigitTwo|RegisterFourBit:dut
+clock => clock.IN4
+clear_n => clear_n.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= RegisterOneBit:bitZero.qout
+q[1] <= RegisterOneBit:bitOne.qout
+q[2] <= RegisterOneBit:bitTwo.qout
+q[3] <= RegisterOneBit:bitThree.qout
+
+
+|SixDigitCounterDisplay|Counter:DigitTwo|RegisterFourBit:dut|RegisterOneBit:bitZero
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitTwo|RegisterFourBit:dut|RegisterOneBit:bitOne
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitTwo|RegisterFourBit:dut|RegisterOneBit:bitTwo
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitTwo|RegisterFourBit:dut|RegisterOneBit:bitThree
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitThree
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= <GND>
+sum[2] <= <GND>
+sum[3] <= <GND>
+
+
+|SixDigitCounterDisplay|Counter:DigitThree|RegisterFourBit:dut
+clock => clock.IN4
+clear_n => clear_n.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= RegisterOneBit:bitZero.qout
+q[1] <= RegisterOneBit:bitOne.qout
+q[2] <= RegisterOneBit:bitTwo.qout
+q[3] <= RegisterOneBit:bitThree.qout
+
+
+|SixDigitCounterDisplay|Counter:DigitThree|RegisterFourBit:dut|RegisterOneBit:bitZero
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitThree|RegisterFourBit:dut|RegisterOneBit:bitOne
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitThree|RegisterFourBit:dut|RegisterOneBit:bitTwo
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitThree|RegisterFourBit:dut|RegisterOneBit:bitThree
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFour
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= <GND>
+sum[2] <= <GND>
+sum[3] <= <GND>
+
+
+|SixDigitCounterDisplay|Counter:DigitFour|RegisterFourBit:dut
+clock => clock.IN4
+clear_n => clear_n.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= RegisterOneBit:bitZero.qout
+q[1] <= RegisterOneBit:bitOne.qout
+q[2] <= RegisterOneBit:bitTwo.qout
+q[3] <= RegisterOneBit:bitThree.qout
+
+
+|SixDigitCounterDisplay|Counter:DigitFour|RegisterFourBit:dut|RegisterOneBit:bitZero
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFour|RegisterFourBit:dut|RegisterOneBit:bitOne
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFour|RegisterFourBit:dut|RegisterOneBit:bitTwo
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFour|RegisterFourBit:dut|RegisterOneBit:bitThree
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFive
+clock => clock.IN1
+clear_n => clear_n.IN1
+addBy[0] => Add0.IN4
+addBy[1] => Add0.IN3
+addBy[2] => Add0.IN2
+addBy[3] => Add0.IN1
+count[0] <= RegisterFourBit:dut.q
+count[1] <= RegisterFourBit:dut.q
+count[2] <= RegisterFourBit:dut.q
+count[3] <= RegisterFourBit:dut.q
+sum[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= <GND>
+sum[2] <= <GND>
+sum[3] <= <GND>
+
+
+|SixDigitCounterDisplay|Counter:DigitFive|RegisterFourBit:dut
+clock => clock.IN4
+clear_n => clear_n.IN4
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+d[3] => d[3].IN1
+q[0] <= RegisterOneBit:bitZero.qout
+q[1] <= RegisterOneBit:bitOne.qout
+q[2] <= RegisterOneBit:bitTwo.qout
+q[3] <= RegisterOneBit:bitThree.qout
+
+
+|SixDigitCounterDisplay|Counter:DigitFive|RegisterFourBit:dut|RegisterOneBit:bitZero
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFive|RegisterFourBit:dut|RegisterOneBit:bitOne
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFive|RegisterFourBit:dut|RegisterOneBit:bitTwo
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|Counter:DigitFive|RegisterFourBit:dut|RegisterOneBit:bitThree
+clock => qout~reg0.CLK
+clear_n => qout.OUTPUTSELECT
+din => qout.DATAB
+qout <= qout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|SevenSegmentDecode:SegZero
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|SevenSegmentDecode:SegOne
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|SevenSegmentDecode:SegTwo
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|SevenSegmentDecode:SegThree
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|SevenSegmentDecode:SegFour
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SixDigitCounterDisplay|SevenSegmentDecode:SegFive
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
