@@ -1,0 +1,57 @@
+C:/digital_logic_design/ECE272/lab3/segmentF.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentF.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentF
+
+Top level modules:
+	segmentF
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/segmentB.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentB
+
+Top level modules:
+	segmentB
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/SevenSegmentDisplay.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/SevenSegmentDisplay.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SevenSegmentDisplay
+
+Top level modules:
+	SevenSegmentDisplay
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/segmentG.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentG.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentG
+
+Top level modules:
+	segmentG
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/segmentC.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentC
+
+Top level modules:
+	segmentC
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/segmentD.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentD.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentD
+
+Top level modules:
+	segmentD
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/segmentE.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentE
+
+Top level modules:
+	segmentE
+
+} {} {}} C:/digital_logic_design/ECE272/lab3/segmentA.v {1 {vlog -work work -stats=none C:/digital_logic_design/ECE272/lab3/segmentA.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module segmentA
+
+Top level modules:
+	segmentA
+
+} {} {}}

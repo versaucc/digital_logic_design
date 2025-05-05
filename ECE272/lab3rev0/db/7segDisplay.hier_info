@@ -1,0 +1,14 @@
+|SevenSegDisplay
+digit[3] => ~NO_FANOUT~
+digit[2] => ~NO_FANOUT~
+digit[1] => ~NO_FANOUT~
+digit[0] => ~NO_FANOUT~
+segment[6] => ~NO_FANOUT~
+segment[5] => ~NO_FANOUT~
+segment[4] => ~NO_FANOUT~
+segment[3] => ~NO_FANOUT~
+segment[2] => ~NO_FANOUT~
+segment[1] => ~NO_FANOUT~
+segment[0] => ~NO_FANOUT~
+
+

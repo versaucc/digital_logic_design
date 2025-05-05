@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/digital_logic_design/ECE272/lab3b
+vsegmentA
+Z0 !s110 1745525341
+!i10b 1
+!s100 8Z:TBAN_4Rz63c8n4lT<k0
+Il0z5YP<62ELJE8Qk[nKo_1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/digital_logic_design/ECE272/lab3
+w1745518751
+8C:/digital_logic_design/ECE272/lab3/segmentA.v
+FC:/digital_logic_design/ECE272/lab3/segmentA.v
+Z3 L0 20
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1745525341.000000
+!s107 C:/digital_logic_design/ECE272/lab3/segmentA.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentA.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+nsegment@a
+vsegmentB
+R0
+!i10b 1
+!s100 f6d:K^S_LcmYYQcGi1>^J1
+I=C`PV6@BPQ;5bZ]D3m8:Q2
+R1
+R2
+w1745518770
+8C:/digital_logic_design/ECE272/lab3/segmentB.v
+FC:/digital_logic_design/ECE272/lab3/segmentB.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab3/segmentB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentB.v|
+!i113 1
+R6
+R7
+nsegment@b
+vsegmentC
+Z8 !s110 1745525342
+!i10b 1
+!s100 hiBdmGkS64eLOYi4Zhm270
+I`ng9@gQNal90XfTKQWV0Y2
+R1
+R2
+w1744956753
+8C:/digital_logic_design/ECE272/lab3/segmentC.v
+FC:/digital_logic_design/ECE272/lab3/segmentC.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab3/segmentC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentC.v|
+!i113 1
+R6
+R7
+nsegment@c
+vsegmentD
+R8
+!i10b 1
+!s100 7=948f08Ahe8SF?SmfeHS2
+I6J3^57SoFDRbS<K@50PLk1
+R1
+R2
+w1745518707
+8C:/digital_logic_design/ECE272/lab3/segmentD.v
+FC:/digital_logic_design/ECE272/lab3/segmentD.v
+R3
+R4
+r1
+!s85 0
+31
+Z9 !s108 1745525342.000000
+!s107 C:/digital_logic_design/ECE272/lab3/segmentD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentD.v|
+!i113 1
+R6
+R7
+nsegment@d
+vsegmentE
+R8
+!i10b 1
+!s100 K5FgXcbmE47;ORlg6cKXn3
+If>hzN3zYEgBM_[hW594NN3
+R1
+R2
+w1745518723
+8C:/digital_logic_design/ECE272/lab3/segmentE.v
+FC:/digital_logic_design/ECE272/lab3/segmentE.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/digital_logic_design/ECE272/lab3/segmentE.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentE.v|
+!i113 1
+R6
+R7
+nsegment@e
+vsegmentF
+R8
+!i10b 1
+!s100 ZiciV@=g@F1RW>mB]l=`d3
+I6eAlo^><[9zi7A6OFC3O^3
+R1
+R2
+w1745518638
+8C:/digital_logic_design/ECE272/lab3/segmentF.v
+FC:/digital_logic_design/ECE272/lab3/segmentF.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/digital_logic_design/ECE272/lab3/segmentF.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentF.v|
+!i113 1
+R6
+R7
+nsegment@f
+vsegmentG
+R8
+!i10b 1
+!s100 4^m;gUD4XkEAbP87^Vkm]3
+I[mXE:j4IZkiTBAHV7ea=N2
+R1
+R2
+w1745518619
+8C:/digital_logic_design/ECE272/lab3/segmentG.v
+FC:/digital_logic_design/ECE272/lab3/segmentG.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/digital_logic_design/ECE272/lab3/segmentG.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/segmentG.v|
+!i113 1
+R6
+R7
+nsegment@g
+vSevenSegmentDisplay
+!s110 1745525343
+!i10b 1
+!s100 L:B?Q<_>B8ie@af7oC>;e1
+I<2=oVRZ3nW`=zTb3ob`RM0
+R1
+R2
+w1745518596
+8C:/digital_logic_design/ECE272/lab3/SevenSegmentDisplay.v
+FC:/digital_logic_design/ECE272/lab3/SevenSegmentDisplay.v
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/digital_logic_design/ECE272/lab3/SevenSegmentDisplay.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/digital_logic_design/ECE272/lab3/SevenSegmentDisplay.v|
+!i113 1
+R6
+R7
+n@seven@segment@display
