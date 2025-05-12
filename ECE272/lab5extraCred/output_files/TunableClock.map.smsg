@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at SevenSegmentDecode.sv(56): always construct contains both blocking and non-blocking assignments File: C:/digital_logic_design/ECE272/lab5extraCred/SevenSegmentDecode.sv Line: 56

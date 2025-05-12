@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun May 11 00:41:36 2025
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : TunableClock
+Top-level Entity Name : ClockDisplay
+Family : MAX 10
+Total logic elements : 317
+    Total combinational functions : 314
+    Dedicated logic registers : 118
+Total registers : 118
+Total pins : 80
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
