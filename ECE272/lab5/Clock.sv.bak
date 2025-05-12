@@ -1,0 +1,21 @@
+ 
+ 
+module Clock (
+	input logic clock, 
+	input logic reset_n, 
+	output logic [5:0] seconds, // up to 59 log2(59) ~ 6 bit width 
+	output logic [5:0] minutes, // up to 59
+	output logic [4:0] hours // up to 23
+	);
+	
+	logic [5:0] ss; 
+	logic [5:0] mm;
+	logic [5:0] hh; 
+	
+	DynCounter seconds_reg (
+		.clock(clock),
+		.reset_n(reset_n)
+		.reset_n(reset_n),
+		.enable_n(enable_n),
+		.
+	

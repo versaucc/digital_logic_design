@@ -1,0 +1,160 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/digital_logic_design/ECE272/homework3
+vClock
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1746962844
+!i10b 1
+!s100 [V2^mJm1ac7OUe@gjCgA@0
+IlBMT`NaWe2lBU`FP_hL<;3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Clock_sv_unit
+S1
+Z3 dC:/digital_logic_design/ECE272/lab5
+w1746962613
+8C:/digital_logic_design/ECE272/lab5/Clock.sv
+FC:/digital_logic_design/ECE272/lab5/Clock.sv
+L0 6
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1746962844.000000
+!s107 C:/digital_logic_design/ECE272/lab5/Clock.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab5/Clock.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@clock
+vClockTestbench
+R0
+R1
+!i10b 1
+!s100 N=hknIA`;K@f=YOWKiaM=3
+IK00[6fg[1mC63;Rkbz7zZ1
+R2
+!s105 ClockTestbench_sv_unit
+S1
+R3
+w1746962827
+8C:/digital_logic_design/ECE272/lab5/ClockTestbench.sv
+FC:/digital_logic_design/ECE272/lab5/ClockTestbench.sv
+L0 21
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab5/ClockTestbench.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab5/ClockTestbench.sv|
+!i113 1
+R6
+R7
+n@clock@testbench
+vDynCounter
+R0
+R1
+!i10b 1
+!s100 iOP9>JCgofjED1OJJa]ME1
+IUO;jbZAUe=A?0OcUO@WAY0
+R2
+!s105 DynCounter_sv_unit
+S1
+R3
+w1746962510
+8C:/digital_logic_design/ECE272/lab5/DynCounter.sv
+FC:/digital_logic_design/ECE272/lab5/DynCounter.sv
+L0 14
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab5/DynCounter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab5/DynCounter.sv|
+!i113 1
+R6
+R7
+n@dyn@counter
+vOneShot
+R0
+R1
+!i10b 1
+!s100 YlafC8g<C9dU?_zg33>:_3
+IankfRHT:S[=J_hcSLCcM`0
+R2
+!s105 OneShot_sv_unit
+S1
+R3
+w1746942682
+8C:/digital_logic_design/ECE272/lab5/OneShot.sv
+FC:/digital_logic_design/ECE272/lab5/OneShot.sv
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab5/OneShot.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab5/OneShot.sv|
+!i113 1
+R6
+R7
+n@one@shot
+vRegisterNBit
+R0
+R1
+!i10b 1
+!s100 PXMk4K=LT9X@:TlA2UF8I0
+InzVOfMRnb[0Wh<^2BL=OM1
+R2
+!s105 RegisterNBit_sv_unit
+S1
+R3
+w1746748516
+8C:/digital_logic_design/ECE272/lab5/RegisterNBit.sv
+FC:/digital_logic_design/ECE272/lab5/RegisterNBit.sv
+L0 8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/digital_logic_design/ECE272/lab5/RegisterNBit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab5/RegisterNBit.sv|
+!i113 1
+R6
+R7
+n@register@n@bit
+vSevenSegmentDecode
+R0
+!s110 1746962843
+!i10b 1
+!s100 @oXeYOVTe8A0]g]DBll4K0
+I3GWfmOS3Hid_=fC4R:96c0
+R2
+!s105 SevenSegmentDecode_sv_unit
+S1
+R3
+w1746500158
+8C:/digital_logic_design/ECE272/lab5/SevenSegmentDecode.sv
+FC:/digital_logic_design/ECE272/lab5/SevenSegmentDecode.sv
+L0 27
+R4
+r1
+!s85 0
+31
+!s108 1746962843.000000
+!s107 C:/digital_logic_design/ECE272/lab5/SevenSegmentDecode.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/digital_logic_design/ECE272/lab5/SevenSegmentDecode.sv|
+!i113 1
+R6
+R7
+n@seven@segment@decode

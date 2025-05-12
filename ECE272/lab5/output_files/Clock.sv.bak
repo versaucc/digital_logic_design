@@ -1,0 +1,13 @@
+// SR Latch module 
+
+module SRLatch ( 
+	input logic S, 
+	input logic R, 
+	output logic Q,
+	output logic Qx 
+	); 
+	
+	// Mirrors true SR Latch 
+	
+	assign Q = ~(R | Qx); 
+	assign Qn = ~(S | Q); 

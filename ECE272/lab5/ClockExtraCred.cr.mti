@@ -1,0 +1,36 @@
+C:/digital_logic_design/ECE272/lab5/Clock.sv {1 {vlog -work work -sv -stats=none C:/digital_logic_design/ECE272/lab5/Clock.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Clock
+
+Top level modules:
+	Clock
+
+} {} {}} C:/digital_logic_design/ECE272/lab5/OneShot.sv {1 {vlog -work work -sv -stats=none C:/digital_logic_design/ECE272/lab5/OneShot.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module OneShot
+
+Top level modules:
+	OneShot
+
+} {} {}} C:/digital_logic_design/ECE272/lab5/SevenSegmentDecode.sv {1 {vlog -work work -sv -stats=none C:/digital_logic_design/ECE272/lab5/SevenSegmentDecode.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SevenSegmentDecode
+
+Top level modules:
+	SevenSegmentDecode
+
+} {} {}} C:/digital_logic_design/ECE272/lab5/RegisterNBit.sv {1 {vlog -work work -sv -stats=none C:/digital_logic_design/ECE272/lab5/RegisterNBit.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module RegisterNBit
+
+Top level modules:
+	RegisterNBit
+
+} {} {}} C:/digital_logic_design/ECE272/lab5/DynCounter.sv {1 {vlog -work work -sv -stats=none C:/digital_logic_design/ECE272/lab5/DynCounter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DynCounter
+
+Top level modules:
+	DynCounter
+
+} {} {}}

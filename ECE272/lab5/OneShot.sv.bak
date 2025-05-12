@@ -1,0 +1,29 @@
+/* 
+Register to prevent overcounting of a manual signal 
+being pushed during 50MHz clock cycles. 
+*/
+
+module OneShot ( 
+	input logic clock, 
+	input logic d, 
+	output logic q
+	); 
+	
+	logic d_prev; 
+	logic d_prior; 
+	
+	always_ff @(posedge clock) begin 
+		
+		if(!d_prev) begin 
+			q <= d;
+			d_prev <= 1; 
+		end else begin 
+			q <= 0; 
+		end
+	end
+	
+	always_ff @(negedge clock) begin 
+		d_prev <= 0; 
+	end 
+	
+endmodule
