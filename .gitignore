@@ -1,0 +1,65 @@
+# === General OS/IDE ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+*.~*
+
+# === ModelSim ===
+work/
+vsim.wlf
+transcript
+*.vstf
+*.vcd
+*.ucdb
+*.sdf
+*.wlf
+*.mti
+*.dat
+*.ini
+*.mpf
+*.idx
+*.lib
+*.o
+
+# === Quartus Prime ===
+db/
+incremental_db/
+output_files/
+*.rpt
+*.qws
+*.qdf
+*.qsf.bak
+*.smsg
+*.sdc.bak
+*.sof
+*.pof
+*.jic
+*.map.*
+*.fit.*
+*.sta.*
+*.asm.*
+*.pin
+*.summary
+*.sld
+*.qdz
+*.chg
+*.qip
+*.qsys
+
+# === Simulation Cache ===
+*.sim
+*.svf
+*.hex
+*.mif
+
+# === Temporary testbenches / generated ===
+*.bak.*
+*.old.*
+*.tmp.*
+*.err
+
+# === Project Archives ===
+*.qar
+*.zip
