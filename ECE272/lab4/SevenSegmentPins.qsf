@@ -41,10 +41,24 @@ set_location_assignment PIN_M20 -to Seg5[4]
 set_location_assignment PIN_N19 -to Seg5[5]
 set_location_assignment PIN_N20 -to Seg5[6]
 
-set_location_assignment PIN_C10 -to addBy[0]
-set_location_assignment PIN_C11 -to addBy[1]
-set_location_assignment PIN_D12 -to addBy[2]
-set_location_assignment PIN_C12 -to addBy[3]
+set_location_assignment PIN_C10 -to seconds_m
+set_location_assignment PIN_C11 -to minutes_m
+set_location_assignment PIN_D12 -to hours_m
 
-set_location_assignment PIN_B8 -to clock
-set_location_assignment PIN_A7 -to clear_n
+set_location_assignment PIN_B8 -to reset_n
+set_location_assignment PIN_A7 -to clock_m
+
+set_location_assignment PIN_B11 -to seconds[5]
+set_location_assignment PIN_A11 -to seconds[5]
+set_location_assignment PIN_D14 -to seconds[5]
+set_location_assignment PIN_E14 -to seconds[5]
+set_location_assignment PIN_C13 -to seconds[5]
+set_location_assignment PIN_D13 -to seconds[5]
+
+set_location_assignment PIN_B10 -to tick[25]
+set_location_assignment PIN_A10 -to tick[24]
+set_location_assignment PIN_A9 -to tick[23]
+set_location_assignment PIN_A8 -to tick[22]
+
+
+
