@@ -1,0 +1,162 @@
+# Clear any current simulations
+restart -force -nowave
+delete wave *
+
+# Add in waveforms
+add wave clk
+add wave reset
+add wave nickel
+add wave dime
+add wave balance_next
+add wave refund
+add wave vend
+add wave nickel_out
+add wave dime_out
+
+
+
+# Create a repeating clock of 1s
+force sim:/VendingMachineTop/clk 0 0, 1 500ms -repeat 1000ms
+
+# Set initial input values
+force sim:/VendingMachineTop/nickel 0
+force sim:/VendingMachineTop/dime 0
+force sim:/VendingMachineTop/refund 0
+
+# Apply asynchronous reset
+force sim:/VendingMachineTop/reset 1
+run 250ms
+force sim:/VendingMachineTop/reset 0
+run 1000ms
+
+# === CASE 1: 6 NICKELS (5 + 5 + 5 + 5 + 5 + 5 = 30c) ===
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+
+run 2000ms
+
+# === CASE 2: 2 DIMES + 1 NICKEL (10 + 10 + 5 = 25) ===
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+
+# One more nickel to hit 30c
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 2000ms
+
+# === CASE 3: DIME + NICKEL + DIME (10 + 5 + 10 = 25) + NICKEL = 30 ===
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 2000ms
+
+# === CASE 4: 4 DIMES (Overpay: 10 + 10 + 10 + 10 = 40) ===
+
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+force sim:/VendingMachineTop/refund 1
+run 1000ms
+force sim:/VendingMachineTop/refund 0
+run 1000ms
+
+run 3000ms
+
+# === CASE 5: REFUND AFTER PARTIAL INSERTION (Nickel + Dime = 15) ===
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/refund 1
+run 1000ms
+force sim:/VendingMachineTop/refund 0
+run 6000ms
+
+# === CASE 6: DIME + DIME + NICKEL + DIME (10 + 10 + 5 + 10 = 35) ? expect vend at 30 ===
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 1000ms
+
+force sim:/VendingMachineTop/nickel 1
+run 1000ms
+force sim:/VendingMachineTop/nickel 0
+run 1000ms
+
+force sim:/VendingMachineTop/dime 1
+run 1000ms
+force sim:/VendingMachineTop/dime 0
+run 3000ms
