@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at VendingMachineTop.sv(15): object "vend" differs only in case from object "VEND" in the same scope File: C:/Users/Oliver/bots/digital_logic_design/projects/VendingMachine/VendingMachineTop.sv Line: 15
+Info (10281): Verilog HDL Declaration information at VendingMachineTop.sv(13): object "refund" differs only in case from object "REFUND" in the same scope File: C:/Users/Oliver/bots/digital_logic_design/projects/VendingMachine/VendingMachineTop.sv Line: 13
