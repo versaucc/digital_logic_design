@@ -1,0 +1,10 @@
+// MUX
+
+module VGAmux (
+
+
+); 
+
+
+
+endmodule
