@@ -8,7 +8,7 @@
 			2'b00 : dout = 4'b0000; 
 			2'b01 : dout = 4'b0101; 
 			2'b10 : dout = 4'b1010;
-			2'b11 : dout = 4'b1010; 
+			2'b11 : dout = 4'b1111; 
 		endcase
 	end 
 endmodule

@@ -20,7 +20,7 @@ module ClockDivider (
 
     state_t state, next_state;
 
-	logic [9:0] count; // Assuming we will reset every 800 cycles
+	logic [1:0] count; // Assuming we will reset every 800 cycles
 
 	// Update the count every cycle 
 	always_ff @(posedge clk or posedge reset) begin
