@@ -7,6 +7,8 @@ module SyncCount (
 	output logic VSync, 
 	output logic HDisplay,
 	output logic VDisplay
+	output logic [9:0] col,  // 0–639 for horizontal pixel index
+	output logic [9:0] row   // 0–479 for vertical pixel index
 	); 
 	
 	logic [9:0] hcount; // log2(800) ~ 10
@@ -43,6 +45,9 @@ module SyncCount (
 		HDisplay = (hcount >= 144 && hcount < 784); 
 		VDisplay = (vcount >= 35 && vcount < 515);  
 	end
+	
+	assign col = hcount;
+	assign row = vcount;
 
 endmodule
 		   
