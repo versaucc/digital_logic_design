@@ -3,7 +3,6 @@
 module SyncCount (
 	input logic clk, // Takes input from ClockDivider
 	input logic reset, 
-	input logic enable_n,
 	output logic HSync, 
 	output logic VSync, 
 	output logic HDisplay,
