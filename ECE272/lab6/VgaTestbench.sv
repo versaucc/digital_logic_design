@@ -22,9 +22,9 @@
 `define COLOR_OFF     (1'b0)
 
 /*
- * NOTE: To use a constant in code, prefix it with a backtick (`).
+ * NOTE: To use a constant in code, prefix it with a backtick ().
  *
- * Example: validatePixel(`COLOR_ON);
+ * Example: validatePixel(COLOR_ON);
  */
 
 module VgaTestbench();
@@ -49,6 +49,7 @@ module VgaTestbench();
     logic [3:0] redDisplay;
     logic [3:0] greenDisplay;
     logic [3:0] blueDisplay;
+	 
 
     /*
      * Select input color.  Use full intensity red, green, and blue to display
@@ -64,7 +65,7 @@ module VgaTestbench();
      * NOTE: This represents the 50 MHz clock.  The 25 MHz VGA clock will have
      * a period of 4 ps.
      */
-    always @(*) begin
+    always begin
         clock50Mhz = 1'b0;
         #1;
         clock50Mhz = 1'b1;
@@ -72,10 +73,21 @@ module VgaTestbench();
     end
 
     /* Create instance of VgaDriver device under test. */
-    /* TODO */
+    VgaDriver dut (
+	  .clk(clock50Mhz),
+	  .reset(reset_n),
+	  .Red(redControl),
+	  .Green(greenControl),
+	  .Blue(blueControl),
+	  .HSync(hsync),
+	  .VSync(vsync),
+	  .RedDisplay(redDisplay),
+	  .GreenDisplay(greenDisplay),
+	  .BlueDisplay(blueDisplay)
+    );
 
     /*
-     * Assert that the `hsync` signal is low.  Print an error message otherwise.
+     * Assert that the hsync signal is low.  Print an error message otherwise.
      */
     task assertHsyncLow();
         if (hsync !== 1'b0) begin
@@ -84,7 +96,7 @@ module VgaTestbench();
     endtask
 
     /*
-     * Assert that the `hsync` signal is high.  Print an error message
+     * Assert that the hsync signal is high.  Print an error message
      * otherwise.
      */
     task assertHsyncHigh();
@@ -94,7 +106,7 @@ module VgaTestbench();
     endtask
 
     /*
-     * Assert that the `vsync` signal is low.  Print an error message otherwise.
+     * Assert that the vsync signal is low.  Print an error message otherwise.
      */
     task assertVsyncLow();
         if (vsync !== 1'b0) begin
@@ -103,7 +115,7 @@ module VgaTestbench();
     endtask
 
     /*
-     * Assert that the `vsync` signal is high.  Print an error message
+     * Assert that the vsync signal is high.  Print an error message
      * otherwise.
      */
     task assertVsyncHigh();
@@ -117,7 +129,10 @@ module VgaTestbench();
      * in the display interval).  Print an error message otherwise.
      */
     task assertColorOn();
-        /* TODO */
+        if (redDisplay !== 4'b1111 || greenDisplay !== 4'b1111 || blueDisplay !== 4'b1111) begin
+            $display("%0t ps: expected color output ON but got R:%b G:%b B:%b",
+                     $time, redDisplay, greenDisplay, blueDisplay);
+        end
     endtask
 
     /*
@@ -125,7 +140,10 @@ module VgaTestbench();
      * (i.e. in the blanking interval).  Print an error message otherwise.
      */
     task assertColorOff();
-        /* TODO */
+        if (redDisplay !== 4'b0000 || greenDisplay !== 4'b0000 || blueDisplay !== 4'b0000) begin
+            $display("%0t ps: expected color output OFF but got R:%b G:%b B:%b",
+                     $time, redDisplay, greenDisplay, blueDisplay);
+        end
     endtask
 
     /*
@@ -141,8 +159,8 @@ module VgaTestbench();
      * Simulate one pixel and verify that color outputs of the module match what
      * is expected.
      *
-     * colorState: `COLOR_ON if the simulated pixel should output color (i.e.
-     *             during a display interval). `COLOR_OFF if no color should be
+     * colorState: COLOR_ON if the simulated pixel should output color (i.e.
+     *             during a display interval). COLOR_OFF if no color should be
      *             outputted (i.e. during a blanking interval).
      */
     task validatePixel(input bit colorState);
@@ -161,54 +179,63 @@ module VgaTestbench();
 
     /*
      * Simulate an entire horizontal line (800 pixels).  Assert correct
-     * behavior of `hysnc` as well as the `redDisplay`, `greenDisplay`, and
-     * `blueDisplay` signals.
+     * behavior of hysnc as well as the redDisplay, greenDisplay, and
+     * blueDisplay signals.
      *
-     * colorState: `COLOR_ON if the simulated line should output color (i.e.
-     *             during a display interval). `COLOR_OFF if no color should be
+     * colorState: COLOR_ON if the simulated line should output color (i.e.
+     *             during a display interval). COLOR_OFF if no color should be
      *             outputted (i.e. during a blanking interval).
      */
-    task validateLine(input bit colorState);
+    task validateLine(input colorState);
 
         for (int i = 0; i < `H_PULSE_WIDTH; ++i) begin
-            /* TODO */
+            assertHsyncLow();
+            validatePixel(`COLOR_OFF);
         end
 
         for (int i = 0; i < `H_BACK_PORCH; ++i) begin
-            /* TODO */
+            assertHsyncHigh();
+            validatePixel(`COLOR_OFF);
         end
 
-        for (int i = 0; i < `H_DISPLAY_ON; ++i) begin
-            /* TODO */
+        for (int i = 0; i < `H_DISPLAY_LEN; ++i) begin
+            assertHsyncHigh();
+            validatePixel(colorState);
         end
 
         for (int i = 0; i < `H_FRONT_PORCH; ++i) begin
-            /* TODO */
+            assertHsyncHigh();
+            validatePixel(`COLOR_OFF);
         end
 
     endtask
+	 
 
     /*
      * Simulate an entire frame (525 lines).  Assert correct behavior of
-     * `vysnc` as well as the `redDisplay`, `greenDisplay`, and `blueDisplay`
+     * vysnc as well as the redDisplay, greenDisplay, and blueDisplay
      * signals.
      */
     task validateFrame();
 
         for (int i = 0; i < `V_PULSE_WIDTH; ++i) begin
-            /* TODO */
+            assertVsyncLow();
+            validateLine(`COLOR_OFF);
         end
 
         for (int i = 0; i < `V_BACK_PORCH; ++i) begin
-            /* TODO */
+            assertVsyncHigh();
+            validateLine(`COLOR_OFF);
         end
 
-        for (int i = 0; i < `V_DISPLAY_ON; ++i) begin
-            /* TODO */
+        for (int i = 0; i < `V_DISPLAY_LEN; ++i) begin
+            assertVsyncHigh();
+            validateLine(`COLOR_ON);
         end
 
         for (int i = 0; i < `V_FRONT_PORCH; ++i) begin
-            /* TODO */
+            assertVsyncHigh();
+            validateLine(`COLOR_OFF);
         end
 
     endtask
@@ -222,11 +249,10 @@ module VgaTestbench();
 
         reset();
         validateFrame();
-        validateFrame();
+        validateFrame(); // Validate second frame. 
 
         $display("=== End of Simulation ===");
         $stop();
     end
 
 endmodule
-
